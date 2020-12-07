@@ -220,13 +220,15 @@ void deleteNode(tnode* root,int data)
     }
     else if(current->leftChild && current->rightChild)
     {
+
         tnode* inOrderSuccesor=NULL;
 
         tnode* temp=current->rightChild;
 
         while(temp->leftChild!=NULL)
         {
-            temp->leftChild;
+            //printf("%d",current->leftChild->data);
+            temp=temp->leftChild;
         }
 
         inOrderSuccesor=temp;
